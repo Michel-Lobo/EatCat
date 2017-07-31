@@ -3,9 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EatCat"
              x:Class="EatCat.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+<StackLayout>
+    <ListView ItemsSource="{Binding Alimentadores}">
+        <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding NomeAlimentador}" HorizontalOptions="FillAndExpand"></Label>
+                            <Button Text="Alimentar" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+	
 
 </ContentPage>
