@@ -12,6 +12,10 @@
                             <Label Text="{Binding NomeAlimentador}" HorizontalOptions="FillAndExpand"></Label>
                             <Button Text="Alimentar" HorizontalOptions="FillAndExpand"></Button>
                         </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding StatusReservatorio}" HorizontalOptions="FillAndExpand"></Label>
+                            <Label Text="{Binding StatusPrato}" HorizontalOptions="FillAndExpand"></Label>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
