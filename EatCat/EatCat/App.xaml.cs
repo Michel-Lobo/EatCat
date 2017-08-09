@@ -14,6 +14,7 @@ namespace EatCat
 			InitializeComponent();
 
 			MainPage = new EatCat.MainPage();
+            
 		}
 
 		protected override void OnStart ()
