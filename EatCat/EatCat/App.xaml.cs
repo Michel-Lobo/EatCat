@@ -12,8 +12,8 @@ namespace EatCat
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new EatCat.MainPage();
+            DependencyService.Register<ViewModels.Services.IMessageService, ViewModels.Services.MessageService>();
+			MainPage = new NavigationPage(new EatCat.MainPage());
             
 		}
 

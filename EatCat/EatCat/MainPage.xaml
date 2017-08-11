@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:EatCat"
              x:Class="EatCat.MainPage">
 <StackLayout>
-        <ListView ItemsSource="{Binding Alimentadores}" x:Name="ListViewDispenser" ItemTapped="ListViewDispenser_OnItemTapped">
+        <ListView ItemsSource="{Binding Alimentadores}" x:Name="ListViewDispenser" ItemTapped="{Binding NavegarCommand}">
         <ListView.Header>
             <StackLayout Padding="10,5,0,5" BackgroundColor="CadetBlue">
                     <Label Text="Lista de Alimentadores" FontAttributes="Bold" TextColor="White" />

@@ -13,7 +13,8 @@ namespace EatCat.ViewModels
         private string _nomeAlimentador;
         private int _idAlimentador;
         private bool _statusPrato;
-        public ICommand AbrirCommand { get; private set; }
+        public ICommand NavegarCommand { get; private set; }
+        private readonly Services.INavigationService _navigationService;
         private readonly Services.IMessageService _messageService;
 
         public int IdAlimentador
@@ -58,13 +59,14 @@ namespace EatCat.ViewModels
 
         public Alimentador()
         {
-                AbrirCommand = new Command(AbrirPortaDispenser);
+                
                 this._messageService = DependencyService.Get<Services.IMessageService>();
+            this._navigationService = DependencyService.Get<Services.INavigationService>();
         }
 
-        private async void AbrirPortaDispenser()
+        private void Navegar(Alimentador alimentador)
         {
-            await _messageService.ShowAsync("Teste");
+            this._navigationService.NavigationItem(alimentador);
         }
     }
 }
