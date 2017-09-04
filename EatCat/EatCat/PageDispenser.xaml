@@ -12,6 +12,10 @@
                 <ColumnDefinition Width="50"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <StackLayout Spacing="5" HorizontalOptions="FillAndExpand"  Grid.Row="0" Grid.Column="1">
+               <Label Text="{Binding NomeAlimentador}" HorizontalOptions="FillAndExpand"></Label>
+                <Button Text="Servir Comida" HorizontalOptions="FillAndExpand" x:Name="btnServirComida" Clicked="btnServirComida_Clicked"></Button> 
+            </StackLayout>
             
          
             

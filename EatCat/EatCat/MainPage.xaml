@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:EatCat"
              x:Class="EatCat.MainPage">
 <StackLayout>
-        <ListView ItemsSource="{Binding Alimentadores}" x:Name="ListViewDispenser" ItemTapped="{Binding NavegarCommand}">
+        <ListView  ItemsSource="{Binding Alimentadores}" x:Name="listViewDispenser" ItemTapped="ListViewDispenser_OnSelectedItem">
         <ListView.Header>
             <StackLayout Padding="10,5,0,5" BackgroundColor="CadetBlue">
                     <Label Text="Lista de Alimentadores" FontAttributes="Bold" TextColor="White" />
@@ -22,7 +22,7 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0" Grid.Column="0" FontAttributes="Bold"  Text="{Binding NomeAlimentador}" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"></Label>
-                                                        
+                            <Button Grid.Row="0" Grid.Column="1" Text="Servir" Clicked="Button_Clicked"/>
                         </Grid>
                         
                     </ViewCell>

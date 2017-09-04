@@ -7,9 +7,9 @@ namespace EatCat.ViewModels.Services
 {
     public class NavigationService : INavigationService
     {
-        public async Task NavigationItem(Alimentador alimentador)
+        public async Task NavigationItem()
         {
-            await EatCat.App.Current.MainPage.Navigation.PushAsync(new PageDispenser(alimentador));
+            await EatCat.App.Current.MainPage.Navigation.PushAsync(new PageDispenser());
         }
     }
 }

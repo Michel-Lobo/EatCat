@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EatCat.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Entry Placeholder="nome do usuário" Text="{Binding UserName}" Keyboard="Email"/>
+            <Entry Placeholder="senha" Text="{Binding Password}" IsPassword="True"/>
+            <Button Text="entrar" HorizontalOptions="FillAndExpand" Command="{Binding LogarCommand}"/>
+            <Button Text="criar conta" HorizontalOptions="FillAndExpand"/>
+
+            <Label Text="Welcome to Xamarin Forms!" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

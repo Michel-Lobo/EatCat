@@ -13,7 +13,8 @@ namespace EatCat
 		{
 			InitializeComponent();
             DependencyService.Register<ViewModels.Services.IMessageService, ViewModels.Services.MessageService>();
-			MainPage = new NavigationPage(new EatCat.MainPage());
+            DependencyService.Register<ViewModels.Services.INavigationService, ViewModels.Services.NavigationService>();
+			MainPage = new NavigationPage(new EatCat.LoginPage());
             
 		}
 

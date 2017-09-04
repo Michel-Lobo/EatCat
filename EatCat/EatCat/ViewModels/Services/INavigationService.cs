@@ -7,6 +7,6 @@ namespace EatCat.ViewModels.Services
 {
     public interface INavigationService
     {
-        Task NavigationItem(Alimentador alimentador);
+        Task NavigationItem();
     }
 }

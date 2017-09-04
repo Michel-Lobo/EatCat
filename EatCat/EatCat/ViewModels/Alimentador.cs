@@ -59,14 +59,14 @@ namespace EatCat.ViewModels
 
         public Alimentador()
         {
-                
-                this._messageService = DependencyService.Get<Services.IMessageService>();
+            this.NavegarCommand = new Command(Navegar);
+            this._messageService = DependencyService.Get<Services.IMessageService>();
             this._navigationService = DependencyService.Get<Services.INavigationService>();
         }
 
-        private void Navegar(Alimentador alimentador)
+        private void Navegar()
         {
-            this._navigationService.NavigationItem(alimentador);
+            this._messageService.ShowAsync("teste");
         }
     }
 }
